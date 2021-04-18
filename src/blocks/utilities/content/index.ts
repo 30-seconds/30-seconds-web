@@ -4,6 +4,10 @@ import fs from 'fs';
 import { Logger } from 'blocks/utilities/logger';
 import { JSONSerializer } from 'blocks/serializers/json';
 
+declare var global: {
+  settings: any
+};
+
 export class Content {
   /**
    * Initialize content sources from their respective GitHub repositories.
@@ -13,7 +17,7 @@ export class Content {
     const boundLog = Logger.bind('utilities.content.update');
     boundLog('Updating content sources started...', 'info');
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const gitUpdate = childProcess.spawn('git', [
         'submodule',
         'update',
@@ -54,7 +58,7 @@ export class Content {
     const boundLog = Logger.bind('utilities.content.update');
     boundLog('Updating content sources started...', 'info');
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const gitUpdate = childProcess.spawn('git', [
         'submodule',
         'update',
@@ -100,7 +104,7 @@ export class Content {
     boundLog('Creating new content source...', 'info');
 
     /* istanbul ignore next */
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const gitAdd = childProcess.spawn('git', [
         'submodule',
         'add',
@@ -122,7 +126,7 @@ export class Content {
     })
       .then(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise<void>((resolve, reject) => {
             const gitConfig = childProcess.spawn('git', [
               'config',
               '-f',
@@ -147,7 +151,7 @@ export class Content {
       )
       .then(
         () =>
-          new Promise((resolve, reject) => {
+          new Promise<void>((resolve, reject) => {
             const gitUpdate = childProcess.spawn('git', [
               'submodule',
               'update',

@@ -52,7 +52,7 @@ export class Logger {
     if (procName) message = `[${bold(procName)}] ${message}`;
     if (validTypes.includes(type)) message = `${prefixes[type]}  ${message}`;
 
-    this.outputStream.write(message);
+    Logger.outputStream.write(message);
   };
 
   /**
@@ -62,12 +62,12 @@ export class Logger {
   static bind = procName => {
     const boundLog = _procName => (msg, options) => {
       if (typeof options === 'string')
-        this.log(msg, { type: options, process: _procName });
-      else this.log(msg, { ...options, process: _procName });
+      Logger.log(msg, { type: options, process: _procName });
+      else Logger.log(msg, { ...options, process: _procName });
     };
 
     const _boundLog = boundLog(procName);
-    _boundLog.rebind = subprocName => this.bind(`${procName}:${subprocName}`);
+    // _boundLog.rebind = subprocName => Logger.bind(`${procName}:${subprocName}`);
     return _boundLog;
   };
 
@@ -75,7 +75,7 @@ export class Logger {
    * Logs an empty line.
    */
   static breakLine = () => {
-    this.log('', 'info');
+    Logger.log('', 'info');
   };
 
   /**
@@ -89,6 +89,6 @@ export class Logger {
       `Executable info:   ${process.execPath} {${process.execArgv}}`,
       `Command-line args: ${process.argv.slice(2)}`,
     ];
-    information.forEach(i => this.log(i, 'info'));
+    information.forEach(i => Logger.log(i, 'info'));
   };
 }

@@ -111,6 +111,7 @@ public
 .build
 .assets
 .content
+.compiled
 content/data
 static/assets
 src/xml/sitemap.xml

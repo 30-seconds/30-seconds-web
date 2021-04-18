@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./.compiled",
+    "baseUrl": "./src",
+    "allowJs": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./src/blocks/**/*",
+    "./src/scripts/*",
+    "./src/settings/*.json"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "typeAcquisition": {
+    "include": [
+      "jest"
+    ]
+  }
+}
