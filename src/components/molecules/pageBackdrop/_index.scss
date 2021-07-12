@@ -1,6 +1,5 @@
 // Page background graphic
 .page-graphic {
-  position: relative;
   box-sizing: border-box;
   margin-top: 50px;
   margin-bottom: 40vh;
@@ -37,7 +36,6 @@
 }
 
 .page-backdrop-subtext {
-  margin: 0.5rem auto;
 
   @media screen and (min-width: $layout-medium-breakpoint) {
     max-width: 256px;

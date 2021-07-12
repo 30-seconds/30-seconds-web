@@ -80,6 +80,9 @@ b, strong {
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
 }
+em {
+  font-variation-settings: 'slnt' -6.0;
+}
 sup, sub, code, kbd {
   line-height: 0;
   position: relative;
@@ -120,4 +123,8 @@ table {
     border: 1px solid var(--clr-table-border);
     padding: 0.5rem;
   }
+}
+// Use pointer cursor for label
+label {
+  cursor: pointer;
 }

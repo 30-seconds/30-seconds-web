@@ -1,8 +1,5 @@
 .snippet-card {
-
   .card-source-content {
-    margin: 1.125rem 0 0;
-
     pre {
       margin: 0;
 
@@ -26,19 +23,12 @@
       }
     }
 
-    .card-example-title {
-      padding: 0.25rem .875rem 0;
-      background: var(--clr-code-bg);
-
-      + pre {
-        padding: 0.25rem .875rem 1.5rem;
-      }
-    }
-
     .card-example {
+      margin-top: -.875rem;
+      padding-bottom: 1.5rem;
 
       &::before {
-        display: none;
+        content: 'Examples';
       }
     }
   }

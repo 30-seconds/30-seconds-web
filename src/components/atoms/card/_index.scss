@@ -14,8 +14,6 @@
     font-weight: 500;
     line-height: 2rem;
     margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
     a {
       font-weight: 500;
@@ -25,15 +23,12 @@
 
   // Reusable utility class (tag list, snippet collection subtitle)
   .card-subtitle {
-    margin: 0;
     display: inline-block;
     line-height: 1rem;
   }
 
   // Reusable utility for all card icons
   .card-icon {
-    position: relative;
-    display: inline-block;
     width: 3.25rem;
     height: 3.25rem;
 

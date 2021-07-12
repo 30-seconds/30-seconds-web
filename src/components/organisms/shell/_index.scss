@@ -1,30 +1,4 @@
-// Body scrollbar
-body {
-  &::-webkit-scrollbar-track {
-    background: var(--clr-scrollbar-bg);
-  }
-
-  &::-webkit-scrollbar {
-    width: 4px;
-    background: transparent;
-
-    @media screen and (min-width: $layout-medium-breakpoint) {
-      width: 8px;
-    }
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--clr-scrollbar-knob);
-    border-radius: var(--br-md);
-
-    &:hover {
-      background-color: var(--clr-scrollbar-knob-active);
-    }
-  }
-}
-
 .page-container {
-  transition: 0.3s ease all;
   background: var(--clr-bg);
   width: 100vw;
   min-height: 100vh;
@@ -35,7 +9,6 @@ body {
   position: sticky;
   top: 0;
   flex-flow: row wrap;
-  transition: 0.3s ease all;
   background: var(--clr-navbar-bg);
   box-shadow: var(--shd-el-01dp);
   line-height: 0;
@@ -102,7 +75,6 @@ body {
 }
 
 img.nav-website-logo {
-  transition: 0.3s ease all;
   padding: 4px;
   width: 56px;
   height: 56px;
@@ -116,7 +88,6 @@ img.nav-website-logo {
 
 // Content container
 .content {
-  transition: 0.3s ease all;
   background: var(--clr-bg);
   padding-right: 4px;  // Pad to the right for the scrollbar (4px)
 

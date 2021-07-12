@@ -1,6 +1,4 @@
 .paginator {
-  margin: 1.75rem 1.25rem 1.5rem;
-  align-items: center;
 
   .btn, a.btn, span {
     box-sizing: border-box;
@@ -8,15 +6,8 @@
     text-align: center;
   }
 
-  .current-page {
-    cursor: default;
-    background: transparent;
-    margin-top: 0;
-  }
-
   .previous-page, .next-page {
     color: var(--clr-primary-050);
-    position: relative;
     display: flex;
 
     &:before {
